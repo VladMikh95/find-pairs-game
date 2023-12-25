@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "ml.vladmikh.projects.find_pairs_game"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "ml.vladmikh.projects.find_pairs_game"
         minSdk = 24
-        targetSdk = 33
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

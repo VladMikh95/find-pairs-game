@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.game_scene.GameSceneFragment">
+
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:background="@drawable/timer_background"
+        android:text="00:00"
+        android:paddingStart="@dimen/_48dp"
+        android:paddingEnd="@dimen/_8dp"
+        android:layout_marginStart="@dimen/_36dp"
+        android:textSize="@dimen/_22sp"
+        app:layout_constraintTop_toTopOf="@id/textViewMoney"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewTimer"
+        android:layout_width="@dimen/_36dp"
+        android:layout_height="@dimen/_36dp"
+        android:src="@drawable/timer"
+        android:layout_marginStart="@dimen/_32dp"
+        android:layout_marginTop="@dimen/_60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewMoney"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
+        android:src="@drawable/coin"
+        android:layout_marginEnd="@dimen/_8dp"
+        app:layout_constraintTop_toTopOf="@id/textViewMoney"
+        app:layout_constraintEnd_toStartOf="@id/textViewMoney"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_64dp"
+        android:layout_marginEnd="@dimen/_32dp"
+        android:text="100"
+        android:textSize="@dimen/_22sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/less_time_more_reward"
+        app:layout_constraintTop_toBottomOf="@id/imageViewTimer"
+        app:layout_constraintStart_toStartOf="@id/imageViewTimer"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewHint">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem1"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem2"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toEndOf="@id/fieldItem1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem3"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem3"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem4"
+            app:layout_constraintStart_toEndOf="@id/fieldItem2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem4"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fieldItem3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem5"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem1"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem6"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem6"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toEndOf="@id/fieldItem5"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem1"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem7"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem7"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem8"
+            app:layout_constraintStart_toEndOf="@id/fieldItem6"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem8"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fieldItem7"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem9"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem10"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toEndOf="@id/fieldItem9"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem5"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem11"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem11"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem12"
+            app:layout_constraintStart_toEndOf="@id/fieldItem10"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem12"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fieldItem11"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem13"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem9"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem14"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem14"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toEndOf="@id/fieldItem13"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem9"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem15"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem15"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem16"
+            app:layout_constraintStart_toEndOf="@id/fieldItem14"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem9" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem16"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fieldItem15"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem9" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem17"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem13"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem18"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem18"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintStart_toEndOf="@id/fieldItem17"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem13"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem19"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem19"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toStartOf="@id/fieldItem20"
+            app:layout_constraintStart_toEndOf="@id/fieldItem18"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem13" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/fieldItem20"
+            style="@style/Theme.Findpairsgame.ImageViewField"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/fieldItem19"
+            app:layout_constraintTop_toBottomOf="@id/fieldItem13"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

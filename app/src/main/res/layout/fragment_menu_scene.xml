@@ -51,13 +51,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <androidx.appcompat.widget.AppCompatImageView
+    <androidx.appcompat.widget.AppCompatImageButton
         android:id="@+id/buttonPrivacyPolicy"
         android:layout_width="@dimen/_64dp"
         android:layout_height="@dimen/_64dp"
         android:layout_margin="@dimen/_32dp"
         android:background="@drawable/background_logo"
         android:src="@drawable/privacy_policy"
+        android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
 

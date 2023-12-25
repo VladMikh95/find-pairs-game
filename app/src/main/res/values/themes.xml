@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.Findpairsgame" parent="Base.Theme.Findpairsgame" />
+
+    <style name="Theme.Findpairsgame.ImageViewField">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@drawable/timer_background</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="layout_constraintDimensionRatio">1:1</item>
+        <item name="android:layout_weight">1</item>
+    </style>
 </resources>
