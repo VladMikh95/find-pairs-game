@@ -69,35 +69,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewHint">
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem1"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/fieldItem2"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem2"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toEndOf="@id/fieldItem1"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/fieldItem3"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem3"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toStartOf="@id/fieldItem4"
             app:layout_constraintStart_toEndOf="@id/fieldItem2"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem4"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/fieldItem3"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem5"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toStartOf="parent"
@@ -105,105 +105,105 @@
             app:layout_constraintEnd_toStartOf="@id/fieldItem6"/>
 
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem6"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toEndOf="@id/fieldItem5"
             app:layout_constraintTop_toBottomOf="@id/fieldItem1"
             app:layout_constraintEnd_toStartOf="@id/fieldItem7"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem7"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toStartOf="@id/fieldItem8"
             app:layout_constraintStart_toEndOf="@id/fieldItem6"
             app:layout_constraintTop_toBottomOf="@id/fieldItem1" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem8"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/fieldItem7"
             app:layout_constraintTop_toBottomOf="@id/fieldItem1" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem9"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toStartOf="@id/fieldItem10"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fieldItem5" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem10"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toEndOf="@id/fieldItem9"
             app:layout_constraintTop_toBottomOf="@id/fieldItem5"
             app:layout_constraintEnd_toStartOf="@id/fieldItem11"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem11"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toStartOf="@id/fieldItem12"
             app:layout_constraintStart_toEndOf="@id/fieldItem10"
             app:layout_constraintTop_toBottomOf="@id/fieldItem5" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem12"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/fieldItem11"
             app:layout_constraintTop_toBottomOf="@id/fieldItem5" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem13"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fieldItem9"
             app:layout_constraintEnd_toStartOf="@id/fieldItem14"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem14"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toEndOf="@id/fieldItem13"
             app:layout_constraintTop_toBottomOf="@id/fieldItem9"
             app:layout_constraintEnd_toStartOf="@id/fieldItem15"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem15"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toStartOf="@id/fieldItem16"
             app:layout_constraintStart_toEndOf="@id/fieldItem14"
             app:layout_constraintTop_toBottomOf="@id/fieldItem9" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem16"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/fieldItem15"
             app:layout_constraintTop_toBottomOf="@id/fieldItem9" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem17"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/fieldItem13"
             app:layout_constraintEnd_toStartOf="@id/fieldItem18"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem18"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintStart_toEndOf="@id/fieldItem17"
             app:layout_constraintTop_toBottomOf="@id/fieldItem13"
             app:layout_constraintEnd_toStartOf="@id/fieldItem19"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem19"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toStartOf="@id/fieldItem20"
             app:layout_constraintStart_toEndOf="@id/fieldItem18"
             app:layout_constraintTop_toBottomOf="@id/fieldItem13" />
 
-        <androidx.appcompat.widget.AppCompatTextView
+        <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/fieldItem20"
             style="@style/Theme.Findpairsgame.ImageViewField"
             app:layout_constraintEnd_toEndOf="parent"
