@@ -1,14 +1,21 @@
 package ml.vladmikh.projects.find_pairs_game.ui.game_scene
 
 import android.os.Bundle
+import android.os.SystemClock
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import ml.vladmikh.projects.find_pairs_game.R
 import ml.vladmikh.projects.find_pairs_game.databinding.FragmentGameSceneBinding
+import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.GAME_TIME_IDEAL
+import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.MAX_REWARD
+import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.REWARD_STEP
+import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.TIME_STEP
 
 class GameSceneFragment : Fragment() {
 
@@ -208,6 +215,10 @@ class GameSceneFragment : Fragment() {
                         chosenItem?.setImageDrawable(null)
                         chosenItem?.setBackgroundResource(R.drawable.timer_background)
                         chosenItem = null
+                        viewModel.addNumberOfGuessedPairs()
+                        if(viewModel.isWin()) {
+                            win()
+                        }
                     } else {
                         isChosenItem = false
                         chosenItem?.setBackgroundResource(R.drawable.timer_background)
@@ -224,5 +235,17 @@ class GameSceneFragment : Fragment() {
             }
         }
     }
+
+    private fun win() {
+        val time = SystemClock.elapsedRealtime() - binding.chronometer.base
+        binding.chronometer.stop()
+        viewModel.calculateRewards(time.toInt())
+        val action = GameSceneFragmentDirections.actionGameSceneFragmentToEndGamePopupFragment(viewModel.reward)
+        findNavController().navigate(action)
+
+
+    }
+
+
 
 }

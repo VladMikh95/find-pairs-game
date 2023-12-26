@@ -1,9 +1,8 @@
 package ml.vladmikh.projects.find_pairs_game.ui.game_scene
 
-import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
+
 import androidx.lifecycle.ViewModel
+import ml.vladmikh.projects.find_pairs_game.utils.AppConstants
 import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.COUNT_PAIRS
 
 class GameSceneViewModel: ViewModel() {
@@ -12,6 +11,9 @@ class GameSceneViewModel: ViewModel() {
 
     private var _fieldItems = ArrayList<Int>()
     val fieldItems: ArrayList<Int> get() = _fieldItems
+
+    private var _reward = 0
+    val reward: Int get() = _reward
 
 
 
@@ -39,5 +41,31 @@ class GameSceneViewModel: ViewModel() {
         //Перемешиваем числа в списке
         list.shuffle()
         return list
+    }
+
+    fun addNumberOfGuessedPairs () {
+        numberOfGuessedPairs++
+    }
+
+    fun isWin(): Boolean {
+        return numberOfGuessedPairs == COUNT_PAIRS
+    }
+
+    fun calculateRewards(time: Int) {
+        var new_reward = AppConstants.MAX_REWARD
+        if (time < AppConstants.GAME_TIME_IDEAL) {
+            _reward = new_reward
+        } else {
+
+            var time_control = AppConstants.GAME_TIME_IDEAL
+
+            while(new_reward > 10) {
+                if (time_control < time) {
+                    new_reward -= AppConstants.REWARD_STEP
+                    time_control += AppConstants.TIME_STEP
+                }
+            }
+            _reward = new_reward
+        }
     }
 }
