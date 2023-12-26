@@ -1,6 +1,7 @@
 package ml.vladmikh.projects.find_pairs_game.ui.game_scene
 
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import ml.vladmikh.projects.find_pairs_game.utils.AppConstants
 import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.COUNT_PAIRS
@@ -59,13 +60,16 @@ class GameSceneViewModel: ViewModel() {
 
             var time_control = AppConstants.GAME_TIME_IDEAL
 
-            while(new_reward > 10) {
-                if (time_control < time) {
+            while(time_control < time) {
+                if (new_reward > 10) {
                     new_reward -= AppConstants.REWARD_STEP
-                    time_control += AppConstants.TIME_STEP
+                    Log.i("abc", new_reward.toString())
+                    Log.i("abc", time_control.toString())
                 }
+                time_control += AppConstants.TIME_STEP
             }
             _reward = new_reward
+            Log.i("abc", _reward.toString())
         }
     }
 }

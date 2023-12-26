@@ -10,5 +10,7 @@ object AppConstants {
     val MIN_REWARD  = 10
     val REWARD_STEP = 5
     val TIME_STEP = 1000
+    val PREFS_FILENAME = "prefs"
+    val PREF_REWARD = "pref_reward"
 
 }

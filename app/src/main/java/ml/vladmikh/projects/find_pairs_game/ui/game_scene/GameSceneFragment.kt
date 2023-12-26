@@ -1,5 +1,6 @@
 package ml.vladmikh.projects.find_pairs_game.ui.game_scene
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.os.SystemClock
 import android.util.Log
@@ -12,6 +13,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import ml.vladmikh.projects.find_pairs_game.R
 import ml.vladmikh.projects.find_pairs_game.databinding.FragmentGameSceneBinding
+import ml.vladmikh.projects.find_pairs_game.utils.AppConstants
 import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.GAME_TIME_IDEAL
 import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.MAX_REWARD
 import ml.vladmikh.projects.find_pairs_game.utils.AppConstants.REWARD_STEP
@@ -22,12 +24,18 @@ class GameSceneFragment : Fragment() {
 
     private val viewModel: GameSceneViewModel by viewModels()
 
-    //Переменная хранит количество угаданных пар
-    private var numberOfGuessedPairs = 0
-
     private var isChosenItem = false
     private var chosenItem: ImageView? = null
     private lateinit var binding: FragmentGameSceneBinding
+
+    var prefs: SharedPreferences? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        prefs = this.getActivity()?.getSharedPreferences(AppConstants.PREFS_FILENAME, 0)
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,28 +48,30 @@ class GameSceneFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
+        binding.textViewMoney.text = prefs?.getInt(AppConstants.PREF_REWARD, 0).toString()
         binding.chronometer.start()
-         val fieldItems = viewModel.fieldItems
-            setImage(binding.fieldItem1, fieldItems.get(0))
-            setImage(binding.fieldItem2, fieldItems.get(1))
-            setImage(binding.fieldItem3, fieldItems.get(2))
-            setImage(binding.fieldItem4, fieldItems.get(3))
-            setImage(binding.fieldItem5, fieldItems.get(4))
-            setImage(binding.fieldItem6, fieldItems.get(5))
-            setImage(binding.fieldItem7, fieldItems.get(6))
-            setImage(binding.fieldItem8, fieldItems.get(7))
-            setImage(binding.fieldItem9, fieldItems.get(8))
-            setImage(binding.fieldItem10, fieldItems.get(9))
-            setImage(binding.fieldItem11, fieldItems.get(10))
-            setImage(binding.fieldItem12, fieldItems.get(11))
-            setImage(binding.fieldItem13, fieldItems.get(12))
-            setImage(binding.fieldItem14, fieldItems.get(13))
-            setImage(binding.fieldItem15, fieldItems.get(14))
-            setImage(binding.fieldItem16, fieldItems.get(15))
-            setImage(binding.fieldItem17, fieldItems.get(16))
-            setImage(binding.fieldItem18, fieldItems.get(17))
-            setImage(binding.fieldItem19, fieldItems.get(18))
-            setImage(binding.fieldItem20, fieldItems.get(19))
+        val fieldItems = viewModel.fieldItems
+
+        setImage(binding.fieldItem1, fieldItems.get(0))
+        setImage(binding.fieldItem2, fieldItems.get(1))
+        setImage(binding.fieldItem3, fieldItems.get(2))
+        setImage(binding.fieldItem4, fieldItems.get(3))
+        setImage(binding.fieldItem5, fieldItems.get(4))
+        setImage(binding.fieldItem6, fieldItems.get(5))
+        setImage(binding.fieldItem7, fieldItems.get(6))
+        setImage(binding.fieldItem8, fieldItems.get(7))
+        setImage(binding.fieldItem9, fieldItems.get(8))
+        setImage(binding.fieldItem10, fieldItems.get(9))
+        setImage(binding.fieldItem11, fieldItems.get(10))
+        setImage(binding.fieldItem12, fieldItems.get(11))
+        setImage(binding.fieldItem13, fieldItems.get(12))
+        setImage(binding.fieldItem14, fieldItems.get(13))
+        setImage(binding.fieldItem15, fieldItems.get(14))
+        setImage(binding.fieldItem16, fieldItems.get(15))
+        setImage(binding.fieldItem17, fieldItems.get(16))
+        setImage(binding.fieldItem18, fieldItems.get(17))
+        setImage(binding.fieldItem19, fieldItems.get(18))
+        setImage(binding.fieldItem20, fieldItems.get(19))
 
 
         binding.fieldItem1.setOnClickListener{

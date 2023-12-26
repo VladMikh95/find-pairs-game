@@ -21,7 +21,9 @@
         tools:layout="@layout/fragment_game_scene" >
         <action
             android:id="@+id/action_gameSceneFragment_to_endGamePopupFragment"
-            app:destination="@id/endGamePopupFragment" />
+            app:destination="@id/endGamePopupFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
     <fragment
         android:id="@+id/endGamePopupFragment"
@@ -31,5 +33,10 @@
         <argument
             android:name="reward"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_endGamePopupFragment_to_gameSceneFragment"
+            app:destination="@id/gameSceneFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
     </fragment>
 </navigation>
